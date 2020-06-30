@@ -45,6 +45,7 @@ class BottomNavyBar extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: bgColor,
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(22), topRight: Radius.circular(22),
         boxShadow: [
           if (showElevation)
             const BoxShadow(
