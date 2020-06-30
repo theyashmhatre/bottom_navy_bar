@@ -28,6 +28,8 @@ class BottomNavyBar extends StatelessWidget {
     this.containerHeight = 56,
     this.animationDuration = const Duration(milliseconds: 270),
     this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+    this.topLeftRadius,
+    this.topRightRadius,
     @required this.items,
     @required this.onItemSelected,
     this.curve = Curves.linear,
@@ -49,7 +51,8 @@ class BottomNavyBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(topLeftRadius), topRight: Radius.circular(topRightRadius)),
+            topLeft: Radius.circular(topLeftRadius),
+            topRight: Radius.circular(topRightRadius)),
         boxShadow: [
           if (showElevation)
             const BoxShadow(
