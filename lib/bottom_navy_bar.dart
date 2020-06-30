@@ -15,8 +15,8 @@ class BottomNavyBar extends StatelessWidget {
   final double itemCornerRadius;
   final double containerHeight;
   final Curve curve;
-  final int topRightRadius;
-  final int topLeftRadius;
+  final double topRightRadius;
+  final double topLeftRadius;
 
   BottomNavyBar({
     Key key,
