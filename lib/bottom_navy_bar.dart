@@ -15,6 +15,8 @@ class BottomNavyBar extends StatelessWidget {
   final double itemCornerRadius;
   final double containerHeight;
   final Curve curve;
+  final int topRightRadius;
+  final int topLeftRadius;
 
   BottomNavyBar({
     Key key,
@@ -47,7 +49,7 @@ class BottomNavyBar extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(22), topRight: Radius.circular(22)),
+            topLeft: Radius.circular(topLeftRadius), topRight: Radius.circular(topRightRadius)),
         boxShadow: [
           if (showElevation)
             const BoxShadow(
@@ -61,9 +63,6 @@ class BottomNavyBar extends StatelessWidget {
           width: double.infinity,
           height: containerHeight,
           padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(22), topRight: Radius.circular(22))),
           child: Row(
             mainAxisAlignment: mainAxisAlignment,
             children: items.map((item) {
